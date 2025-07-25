@@ -17,15 +17,15 @@ import ParentDashboard from './Pages/ParentDashboard';
 
 function App() {
   
-  const [user, setUser] = useState(null);          // ✅ This was missing
-  const [loading, setLoading] = useState(true);    // For startup
+  const [user, setUser] = useState(null);          
+  const [loading, setLoading] = useState(true);    
 
   useEffect(() => {
     const stored = localStorage.getItem('user');
     if (stored) {
       setUser(JSON.parse(stored));
     }
-     setLoading(false); // wait for localStorage check
+     setLoading(false); 
   }, []);
 
   const renderNavbar = () => {
@@ -37,7 +37,6 @@ function App() {
     }
   };
 
-
   const renderDashboard = () => {
     switch (user?.role) {
       case 'teacher': return <Dashboard />;
@@ -46,18 +45,20 @@ function App() {
       default: return <div>Unauthorized</div>;
     }
   };
+  
   const handleLogout = () => {
-  localStorage.removeItem('user');
-  setUser(null); // log out
-};
+    localStorage.removeItem('user');
+    setUser(null); 
+  };
+  
   const renderSidebar = () => {
-  switch (user?.role) {
-    case 'teacher': return <Sidebar onLogout={handleLogout} />;
-    case 'student': return <StudentSidebar onLogout={handleLogout} />;
-    case 'parent': return <ParentSidebar onLogout={handleLogout} />;
-    default: return null;
-  }
-};
+    switch (user?.role) {
+      case 'teacher': return <Sidebar onLogout={handleLogout} />;
+      case 'student': return <StudentSidebar onLogout={handleLogout} />;
+      case 'parent': return <ParentSidebar onLogout={handleLogout} />;
+      default: return null;
+    }
+  };
 
   return (
     <Router>
@@ -69,9 +70,14 @@ function App() {
       ) : (
         <div>
           {renderNavbar()}
-          <div style={{ display: 'flex', minHeight: '100vh' }}>
+          <div style={{ display: 'flex', height: 'calc(100vh - 70px)' }}>
             {renderSidebar()}
-            <main style={{ flex: 1, padding: '20px', backgroundColor: '#f9fafb' }}>
+            <main style={{ 
+              flex: 1, 
+              padding: '20px', 
+              backgroundColor: '#f9fafb',
+              overflow: 'auto' 
+            }}>
               <Routes>
                 <Route path="/" element={renderDashboard()} />
                 <Route path="*" element={<Navigate to="/" />} />
@@ -82,9 +88,6 @@ function App() {
       )}
     </Router>
   );
- 
-
 }
-
 
 export default App;

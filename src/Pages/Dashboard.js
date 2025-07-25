@@ -46,6 +46,7 @@ function Dashboard() {
         <div className="notify-buttons">
           <button className="btn btn-primary">Notify All</button>
           <button className="btn btn-secondary">Send Alert</button>
+
         </div>
       </div>
     </div>
