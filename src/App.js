@@ -14,6 +14,10 @@ import ParentSidebar from './components/ParentSidebar';
 import Dashboard from './Pages/Dashboard';
 import StudentDashboard from './Pages/StudentDashboard';
 import ParentDashboard from './Pages/ParentDashboard';
+import MyAttendance from './Pages/MyAttendance';
+import MyBusRoute from './Pages/MyBusRoute';
+import MyProfile from './Pages/MyProfile';
+
 
 function App() {
   
@@ -80,6 +84,9 @@ function App() {
             }}>
               <Routes>
                 <Route path="/" element={renderDashboard()} />
+                <Route path="/myattendance" element={<MyAttendance />} />
+                <Route path="/mybus" element={<MyBusRoute />} />
+                <Route path="/my-profile" element={<MyProfile />} />
                 <Route path="*" element={<Navigate to="/" />} />
               </Routes>
             </main>

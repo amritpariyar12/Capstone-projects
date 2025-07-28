@@ -7,7 +7,7 @@ function StudentNavbar() {
             <h3 className="navbar-title">EduTrack</h3>
             <div className="navbar-search">
                 <input type="text" placeholder="Search" />
-                <span>👤</span>
+                {/* <span>👤</span> */}
             </div>
         </nav>
     );

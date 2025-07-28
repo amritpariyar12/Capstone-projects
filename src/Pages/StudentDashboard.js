@@ -2,24 +2,29 @@ import React from 'react';
 import './StudentDashboard.css';
 
 function StudentDashboard() {
+  const today = "Shrawan 13, 2082";  // You can make this dynamic later
+
   return (
     <div className="student-dashboard">
-      <h2>📈 My Attendance</h2>
-      <div className="attendance-card">
-        <p><strong>Date:</strong> 2082/03/20</p>
-        <p><strong>Status:</strong> Present</p>
-        <p><strong>Time In:</strong> 09:05 AM</p>
-        <p><strong>Time Out:</strong> 03:50 PM</p>
-      </div>
+      <h2>Today's Summary</h2>
 
-      <h2>🚌 My Bus Route</h2>
-      <div className="bus-info-card">
-        <p><strong>Route:</strong> Parasi → Campus</p>
-        <p><strong>Estimated Arrival:</strong> 07:55 AM</p>
-        <div className="map-placeholder">[Your Bus Map]</div>
-        <div className="btn-group">
-          <button className="btn btn-primary">Notify Me</button>
-          <button className="btn btn-primary">Wait For Me</button>
+      <div className="dashboard-summary-cards">
+        <div className="summary-card">
+          <h3>📅 Date</h3>
+          <p>{today}</p>
+        </div>
+
+        <div className="summary-card">
+          <h3>✅ Attendance</h3>
+          <p>Status: Present</p>
+          <p>Time In: 09:05 AM</p>
+          <p>Time Out: 03:50 PM</p>
+        </div>
+
+        <div className="summary-card">
+          <h3>🚌 Bus Info</h3>
+          <p>Route: Parasi → Campus</p>
+          <p>Estimated Arrival: 10:15 AM</p>
         </div>
       </div>
     </div>
@@ -27,3 +32,4 @@ function StudentDashboard() {
 }
 
 export default StudentDashboard;
+

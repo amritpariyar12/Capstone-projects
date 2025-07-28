@@ -1,0 +1,65 @@
+.bus-route-container {
+  padding: 20px;
+}
+
+.bus-route-content {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.bus-card, .map-section {
+  flex: 1;
+  background-color: #f4f4f4;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.map-placeholder {
+  background-color: #e0e0e0;
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.notify {
+  background-color: #0ea5e9;
+  color: white;
+}
+
+.wait {
+  background-color: #f97316;
+  color: white;
+}
+
+.notification {
+  background-color: #ecfdf5;
+  border: 1px solid #34d399;
+  padding: 10px;
+  border-radius: 6px;
+  color: #065f46;
+}
+
+.notification.wait-msg {
+  background-color: #fff7ed;
+  color: #9a3412;
+  border: 1px solid #f97316;
+  margin-top: 8px;
+}
