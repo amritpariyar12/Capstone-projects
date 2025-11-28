@@ -18,7 +18,6 @@ function Login({ setUser }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (!credentials.email || !credentials.password) {
       setError('Please fill in all fields');
       return;
@@ -31,10 +30,10 @@ function Login({ setUser }) {
     };
     localStorage.setItem('user', JSON.stringify(user));
 
-    // ✅ Notify App that user is now logged in
+    // Notify App that user is now logged in
     setUser(user);
 
-    // ✅ Navigate to dashboard
+    // Navigate to dashboard
     navigate('/');
   };
 
@@ -69,6 +68,7 @@ function Login({ setUser }) {
             <option value="teacher">Teacher</option>
             <option value="student">Student</option>
             <option value="parent">Parent</option>
+            <option value="driver">Driver</option>
           </select>
         </div>
         <button type="submit" className="login-button">Login</button>

@@ -1,0 +1,19 @@
+/* Navbar */
+.driver-navbar {
+  height: 60px;
+  background: #3498db;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  color: white;
+}
+
+.driver-navbar button {
+  background: #e74c3c;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}

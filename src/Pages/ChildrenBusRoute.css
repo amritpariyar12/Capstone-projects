@@ -1,0 +1,51 @@
+.children-bus-route {
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.children-bus-route h2 {
+  font-size: 20px;
+  color: #0f766e;
+  margin-bottom: 10px;
+}
+
+.bus-info-card {
+  background-color: #ecfdf5;
+  border: 1px solid #99f6e4;
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.map-placeholder {
+  height: 180px;
+  background-color: #ccfbf1;
+  border-radius: 8px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f766e;
+}
+
+.btn-group {
+  margin-top: 12px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: #14b8a6;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0d9488;
+}

@@ -1,19 +1,50 @@
-.dashboard-container {
+/* .teacher-dashboard {
   display: flex;
-  justify-content: space-between;
   gap: 24px;
-  padding: 0; 
-  flex-wrap: wrap;
-  height: calc(100vh - 110px); 
-  overflow: hidden; 
+  padding: 20px;
+  height: calc(100vh - 110px);
+  overflow: hidden;
+  font-family: "Segoe UI", sans-serif;
 }
 
-.attendance-summary {
-  flex: 1.3;
-  max-width: 520px;
+.left-section {
+  flex: 2;
   overflow-y: auto;
 }
 
+.right-section {
+  flex: 1.3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+} */
+ .teacher-dashboard {
+  display: flex;
+  gap: 24px;
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
+  min-height: 100vh;   /* Allow page to grow */
+}
+
+.left-section {
+  flex: 2;
+}
+
+.right-section {
+  flex: 1.3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.section-title {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #1e3a8a;
+}
+
+/* Program group */
 .program-group {
   margin-bottom: 24px;
 }
@@ -21,60 +52,101 @@
 .program-group h3 {
   font-size: 18px;
   margin-bottom: 12px;
-  color: #1e3a8a;
+  color: #374151;
+}
+
+.semester-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .summary-card {
   background: #f9fafb;
-  padding: 12px 16px;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  padding: 14px;
+  border-radius: 10px;
   border: 1px solid #e5e7eb;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  font-size: 16px;
-}
-
-.text-total {
-  color: #374151;
-  font-weight: 500;
-  margin-left: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  min-width: 160px;
+  flex: 1;
 }
 
 .text-present {
   color: #16a34a;
   font-weight: 600;
-  margin-left: 6px;
 }
 
 .text-absent {
   color: #dc2626;
   font-weight: 600;
-  margin-left: 6px;
 }
 
+/* Recent Attendance Log */
+.recent-log {
+  background: #fff;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.log-entry {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+}
+
+.log-entry:last-child {
+  border-bottom: none;
+}
+
+.present {
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.absent {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+/* CCTV Preview */
+.cctv-preview {
+  background: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.cctv-box {
+  background: #111;
+  height: 200px;
+  border-radius: 8px;
+  color: #f9fafb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Bus Tracking */
 .bus-tracking-card {
-  flex: 1.7;
-  min-width: 350px;
   background: #ffffff;
-  padding: 20px;
+  padding: 16px;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
-  height: 100%; 
 }
 
 .bus-info-box {
   border: 1px solid #ccc;
-  padding: 16px;
-  margin-bottom: 16px;
+  padding: 14px;
+  margin-bottom: 12px;
   background-color: #f9f9f9;
   border-radius: 8px;
-  flex-shrink: 0; 
 }
 
 .map-placeholder {
-  height: 260px; 
+  height: 160px;
   background: #e5e7eb;
   border-radius: 8px;
   margin-top: 8px;
@@ -82,19 +154,17 @@
   align-items: center;
   justify-content: center;
   color: #6b7280;
-  font-size: 16px;
-  flex: 1;
+  font-size: 15px;
 }
 
 .notify-buttons {
   display: flex;
   gap: 10px;
-  flex-shrink: 0; 
-  margin-top: 16px;
+  margin-top: 12px;
 }
 
 .btn {
-  padding: 10px 14px;
+  padding: 8px 14px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -113,13 +183,12 @@
 }
 
 @media (max-width: 1024px) {
-  .dashboard-container {
+  .teacher-dashboard {
     flex-direction: column;
     height: auto;
-    overflow: visible;
   }
-  
-  .map-placeholder {
-    height: 150px;
+
+  .right-section {
+    flex-direction: column;
   }
 }

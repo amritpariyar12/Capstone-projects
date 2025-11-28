@@ -23,7 +23,7 @@ function StudentSidebar( { onLogout }) {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/profile" className={({ isActive }) => isActive ? 'active-link' : 'link'}>
+          <NavLink to="/my-profile" className={({ isActive }) => isActive ? 'active-link' : 'link'}>
             👤 Profile
           </NavLink>
         </li>

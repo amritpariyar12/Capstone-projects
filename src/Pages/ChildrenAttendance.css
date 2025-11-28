@@ -1,0 +1,41 @@
+.children-attendance-container {
+  padding: 20px;
+  background-color: #fffdf5;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.month-selector {
+  margin-bottom: 16px;
+}
+
+.attendance-summary {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff8e1;
+}
+
+.attendance-table th,
+.attendance-table td {
+  padding: 10px 14px;
+  border: 1px solid #fcd34d;
+  text-align: center;
+}
+
+.attendance-table tr.present {
+  background-color: #d1fae5;
+}
+
+.attendance-table tr.absent {
+  background-color: #fee2e2;
+}
+
+.attendance-table tr.holiday {
+  background-color: #fef9c3;
+}

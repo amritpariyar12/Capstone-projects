@@ -1,0 +1,53 @@
+.bus-tracking-container {
+  padding: 24px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.bus-tracking-container h2 {
+  margin-bottom: 20px;
+  color: #065f46;
+}
+
+.bus-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.bus-card {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.08);
+}
+
+.bus-card h4 {
+  color: #047857;
+  margin-bottom: 10px;
+}
+
+.map-placeholder {
+  background: #d1fae5;
+  height: 150px;
+  border-radius: 8px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #065f46;
+}
+
+.btn-track {
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-track:hover {
+  background: #059669;
+}

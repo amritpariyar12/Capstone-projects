@@ -16,10 +16,10 @@ function ParentDashboard() {
       <div className="bus-info-card">
         <p><strong>Route:</strong> Parasi  → Campus</p>
         <p><strong>Status:</strong> Bus on the way (500m away)</p>
-        <div className="map-placeholder">[Bus Tracking Map]</div>
+        {/* <div className="map-placeholder">[Bus Tracking Map]</div>
         <div className="btn-group">
           <button className="btn btn-primary">Track Bus</button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

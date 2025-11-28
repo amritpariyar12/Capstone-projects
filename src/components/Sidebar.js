@@ -14,8 +14,8 @@ function Sidebar({ onLogout }) {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/attendance" className={({ isActive }) => isActive ? 'active-link' : 'link'}>
-            📂 Attendance Management
+          <NavLink to="/st-attendance" className={({ isActive }) => isActive ? 'active-link' : 'link'}>
+            📂 Student Management
           </NavLink>
         </li>
         <li>

@@ -50,13 +50,13 @@ function MyBusRoute() {
       <div className="bus-route-content">
         {/* LEFT INFO CARD */}
         <div className="bus-card">
-          <p><strong>Bus Number:</strong> {busInfo.busNumber}</p>
-          <p><strong>Route:</strong> {busInfo.routeFrom} → {busInfo.routeTo}</p>
-          <p><strong>Pickup Location:</strong> {busInfo.busStop}</p>
-          <p><strong>Estimated Arrival:</strong> {busInfo.arrivalTime}</p>
+          <p><strong>🚌 Bus Number:</strong> {busInfo.busNumber}</p>
+          <p><strong>📍 Route:</strong> {busInfo.routeFrom} → {busInfo.routeTo}</p>
+          <p><strong>🚏 Pickup Location:</strong> {busInfo.busStop}</p>
+          <p><strong>⏰ Estimated Arrival:</strong> {busInfo.arrivalTime}</p>
           <hr />
-          <p><strong>Driver Name:</strong> {busInfo.driverName}</p>
-          <p><strong>Driver Contact:</strong> {busInfo.driverPhone}</p>
+          <p><strong>👨‍✈️ Driver Name:</strong> {busInfo.driverName}</p>
+          <p><strong>📞 Driver Contact:</strong> {busInfo.driverPhone}</p>
         </div>
 
         {/* RIGHT MAP + BUTTONS */}
