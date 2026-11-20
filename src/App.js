@@ -39,14 +39,14 @@ import DriverDashboard from "./Pages/DriverDashboard";
 
 function App() {
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const stored = localStorage.getItem("user");
     if (stored) {
       setUser(JSON.parse(stored));
     }
-    setLoading(false);
+    // setLoading(false);
   }, []);
 
   const renderNavbar = () => {

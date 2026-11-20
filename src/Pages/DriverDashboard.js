@@ -6,6 +6,7 @@ import { getDriverBusInfo, updateLocation, sendNotification } from '../api/drive
 function DriverDashboard() {
   const [bus, setBus] = useState(null);
   const [location, setLocation] = useState({ lat: 0, lng: 0 });
+  // const driverName = "John Doe";
   const [driverName, setDriverName] = useState("John Doe"); // replace with real login name
 
   useEffect(() => {
